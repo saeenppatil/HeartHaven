@@ -62,6 +62,7 @@ function submitForm() {
     // Calculate BMI if weight and height are available and append directly to results array
     if (weight && height) {
         let bmi = weight / ((height / 100) ** 2); // Assumes height is in cm, converts to meters in calculation
+        bmi = Math.round(bmi);
         formData.append('BMI', bmi.toFixed(2)); // Append the label 'BMI' and calculated value to the results array
     }
 
