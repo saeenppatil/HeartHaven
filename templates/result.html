@@ -20,18 +20,21 @@
     </nav>
     <div class="container-fluid full-page">
         <div class="row full-page">
-            <div class="col-6 hero-image-section">
-                <div class="hero-image-container"><img class="hero-image" src="{{ url_for('static',filename='images/istockphoto-1181180127-170667a.webp')}}" /></div>
+            <div class="col-2 hero-image-section"></div>
+            <div class="col-4 hero-image-section">
+                <div class="hero-image-container"><img class="hero-image" src="{{ url_for('static',filename='images/HeartDiseaseVSAge.png')}}" /></div>
             </div>
-            <div class="col-6">
-                <h1></h1>
+            <div class="col-4 hero-image-section">
+                <div class="hero-image-container"><img class="hero-image" src="{{ url_for('static',filename='images/HeartDiseaseVsBMI.png')}}" /></div>
             </div>
+            <div class="col-2 hero-image-section"></div>
         </div>
         <div class="container">
-            <h1>Results</h1>
+            <h1>Survey Results</h1>
             <p>
-                {{ user_data['Name'] }}, You have a <span id="probability">{{ user_data['probability'] }}</span>% probability of developing coronary heart disease in the next 10 years. <br />
-            </p>
+                <span id="emphasisText">Hi {{ user_data['Name'] }}!</span> You have a <span id="probability">{{ user_data['probability'] }}%</span> probability of developing coronary heart disease in the next 10 years. <br />
+            </p> <br>
+            <h1>What Does This Mean?</h1>
             <p>
                 The number one leading cause of death in the world. On average, people in the age group {{ user_data['AgeGroupLowerBound'] }} - {{ user_data['AgeGroupHigherBound'] }} have a {{ user_data['AgeGroupProbability'] }} chance of developing The risk of certain
                 heart diseases may be increased by smoking, high blood pressure, high cholesterol, unhealthy diet, lack of exercise, and
@@ -82,7 +85,7 @@
                     <span class="bold">Manage Cholesterol Levels:</span> Keep your cholesterol levels in check by following a healthy diet, exercising regularly, and,
                 </li>
                 <li>
-                    Control Blood Sugar Levels: If you have diabetes or are at risk of developing it, monitor your blood sugar levels
+                    <span class="bold">Control Blood Sugar Levels:</span> If you have diabetes or are at risk of developing it, monitor your blood sugar levels
                     closely and follow your healthcare provider's recommendations for management.
                 </li>
             </ul>

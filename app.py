@@ -147,7 +147,7 @@ def receive_data():
     response = {
         "status": "success",
         "probability": probabilityOfUserHeartDisease,
-        "Name": first_name + " " + last_name,
+        "Name": first_name,
         "Age": age,
         "AgeGroupLowerBound": ageGroupLowerBound,
         "AgeGroupHigherBound": ageGroupHigherBound,
