@@ -23,6 +23,11 @@ body, html {
     width: 50px;
 }
 
+.navbar-words{
+    width: 30%;
+    padding-left: 20px;
+}
+
 
 .carousel-container {
     width: 100%; 
