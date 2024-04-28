@@ -85,13 +85,23 @@ def index():
 # "AgeGroupLowerBound": ageGroupLowerBound,
 # "AgeGroupHigherBound": ageGroupHigherBound,
 # "AgeGroupProbability": ageGroupProbability,
-@app.route('/go-result/prob/<user_prob>/name/<user_name>/age/<user_age>/ageLower/<age_lower>/ageHigher/<age_higher>/ageProb/<age_prob>')
-def start_result(data):
-    return render_template('result.html',user_data=data)
+@app.route('/go-result/prob/<float:user_prob>/name/<user_name>/age/<int:user_age>/ageLower/<int:age_lower>/ageHigher/<int:age_higher>/ageProb/<age_prob>')
+def start_result(user_prob, user_name, user_age, age_lower, age_higher, age_prob):
+    data = {
+        "probability": user_prob,
+        "Name": user_name,
+        "Age": user_age,
+        "AgeGroupLowerBound": age_lower,
+        "AgeGroupHigherBound": age_higher,
+        "AgeGroupProbability": age_prob,
+    }
+    print(data)
+    return render_template('result.html', user_data=data)
 
 @app.route('/go-survey')
 def start_survey():
     return render_template('survey.html')
+
     
 @app.route('/go-landing')
 def start_landing():

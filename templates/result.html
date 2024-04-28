@@ -12,8 +12,8 @@
 
 <body>
     <nav class="navbar navbar-custom">
-        <a href="./landing.html">
-            <img class="navbar-icon" src="../static/images/HeartHavenWhiteLogoSimple.png"/>
+        <a href="/go-landing">
+            <img class="navbar-icon" src="../static/images/logoNameWhite.svg"/>
         </a>
         
     </nav>
@@ -29,7 +29,7 @@
         <div class="container">
             <h1>Results</h1>
             <p>
-                You have a <span id="probability">{{data.probability}}</span> probability of developing coronary heart disease in the next 10 years. <br />
+                You have a <span id="probability">{{ user_data['probability'] }}</span> probability of developing coronary heart disease in the next 10 years. <br />
             </p>
             <p>
                 The number one leading cause of death in the world. On average, people in the age group __ - __ have a __.__% chance of developing The risk of certain
