@@ -9,8 +9,8 @@ body, html {
 }
 
 .carousel-container {
-    width: 100%; /* Set to 100% of its parent container */
-    max-width: 800px; /* Maximum width can still be set to limit the size on larger screens */
+    width: 100%; 
+    max-width: 800px; 
     overflow: hidden;
     position: relative;
 }
@@ -18,35 +18,139 @@ body, html {
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    width: 500%; /* Adjust based on number of slides */
+    width: 500%; 
     background: white;
     overflow: hidden;
 }
 
 .carousel-slide {
-    width: 20%; /* Each slide should be full width of the container divided by number of slides */
-    height: 50vh; /* Height can remain fixed or be made responsive with vh units */
+    width: 20%; 
+    height: 50vh; 
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     color: #8c1c13;
-    font-size: 24px;
-    border: 4px solid #8c1c13; /* Example border: 2px solid black */
+    font-size: 1rem;
+    border: 4px solid #8c1c13; 
     box-sizing: border-box;
     border-radius: 5%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
+#slideIndicator{
+    color: #8c1c13;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    appearance: none; 
+    background-color: black; 
+    border: 8px solid rgb(218, 218, 218);
+    padding: 10px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    position: relative;
+}
+
+.form-check-input:checked {
+    background-color: #ccc; 
+    border-color: rgb(218, 218, 218); 
+}
+
+.form-check-input:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:#8c1c13;
+    display: block;
+   
+    transform: translate(-50%, -50%);
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #8c1c13;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none; 
+    box-shadow: none;
+  }
+  
+  .custom-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background:#8c1c13;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .custom-range::-webkit-slider-thumb:focus,
+  .custom-range::-webkit-slider-thumb:active {
+    background: #8c1c13; 
+    box-shadow: none;
+  }
+  
+  .custom-range::-moz-range-thumb:focus,
+  .custom-range::-moz-range-thumb:active {
+    background: #8c1c13;
+    box-shadow: none;
+  }
+  
+
+  .custom-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background:  rgb(218, 218, 218);  
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  
+  .custom-range::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: rgb(218, 218, 218); 
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  
+  .custom-range:focus::-webkit-slider-runnable-track,
+  .custom-range:active::-webkit-slider-runnable-track {
+    background:  rgb(218, 218, 218);
+    box-shadow: none; 
+  }
+  
+  .custom-range:focus::-moz-range-track,
+  .custom-range:active::-moz-range-track {
+    background: rgb(218, 218, 218); 
+    box-shadow: none;
+  }
+  
+  .custom-range:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
 .carousel-navigation {
     display: flex;
-    justify-content: space-around; /* Distributes space evenly between items */
-    padding: 10px 50px; /* Adds padding above and below the navigation bar */
+    justify-content: space-around; 
+    padding: 10px 50px; 
     width: 100%;
     margin-top: 40px;
 }
 
 .prev-btn, .next-btn {
     background-color: #8c1c13;
-    color: white; /* Enhances visibility against the dark background */
+    color: white; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -56,7 +160,7 @@ body, html {
 }
 
 .progress-bar {
-    width: 99.78%; /* Full width of the carousel container */
+    width: 99.78%; 
     height: 20px;
     background-color: white;
     border: 1px solid black;
@@ -67,6 +171,6 @@ body, html {
 .progress {
     height: 100%;
     background-color: #8c1c13;
-    width: 0%; /* Initial width */
+    width: 0%; 
     border-radius: 10px;
 }
