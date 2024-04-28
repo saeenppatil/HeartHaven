@@ -44,7 +44,6 @@ function submitForm() {
     const formData = new FormData();
     let weight = null;
     let height = null;
-    const results = []; // Array to store the calculated BMI values
 
     // Collect all input values and store them in FormData
     document.querySelectorAll('.carousel-slide').forEach(slide => {
