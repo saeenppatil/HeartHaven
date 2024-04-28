@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/result.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/result.css') }}">
     <title> Heart Haven Result</title>
 </head>
 
 <body>
     <nav class="navbar navbar-custom">
         <a href="/go-landing">
-            <img class="navbar-icon" src="../static/images/logoNameWhite.svg"/>
+            <img class="navbar-icon" src="{{ url_for('static',filename='images/HeartHavenWhiteLogoSimple.png')}}"/>
+            <img class="navbar-words" src="{{ url_for('static',filename='images/logoNameWhite.svg')}}"/>
         </a>
         
     </nav>
     <div class="container-fluid full-page">
         <div class="row full-page">
             <div class="col-6 hero-image-section">
-                <div class="hero-image-container"><img class="hero-image" src="../static/images/istockphoto-1181180127-170667a.webp" /></div>
+                <div class="hero-image-container"><img class="hero-image" src="{{ url_for('static',filename='images/istockphoto-1181180127-170667a.webp')}}" /></div>
             </div>
             <div class="col-6">
                 <h1></h1>

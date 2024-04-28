@@ -102,7 +102,10 @@ def start_result(user_prob, user_name, user_age, age_lower, age_higher, age_prob
 def start_survey():
     return render_template('survey.html')
 
-    
+@app.route('/css-result')
+def start_result_css():
+    return render_template('result.css')
+
 @app.route('/go-landing')
 def start_landing():
     return render_template('landing.html')
