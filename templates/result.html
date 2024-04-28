@@ -30,10 +30,10 @@
         <div class="container">
             <h1>Results</h1>
             <p>
-                You have a <span id="probability">{{ user_data['probability'] }}</span> probability of developing coronary heart disease in the next 10 years. <br />
+                {{ user_data['Name'] }}, You have a <span id="probability">{{ user_data['probability'] }}</span>% probability of developing coronary heart disease in the next 10 years. <br />
             </p>
             <p>
-                The number one leading cause of death in the world. On average, people in the age group __ - __ have a __.__% chance of developing The risk of certain
+                The number one leading cause of death in the world. On average, people in the age group {{ user_data['AgeGroupLowerBound'] }} - {{ user_data['AgeGroupHigherBound'] }} have a {{ user_data['AgeGroupProbability'] }} chance of developing The risk of certain
                 heart diseases may be increased by smoking, high blood pressure, high cholesterol, unhealthy diet, lack of exercise, and
                 obesity. The most common heart disease is coronary artery disease (narrow or blocked coronary arteries), which can lead
                 to chest pain, heart attacks, or stroke.

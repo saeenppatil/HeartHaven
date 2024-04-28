@@ -142,6 +142,7 @@ def receive_data():
         ]
     print(model_data_array)
     probabilityOfUserHeartDisease = logistic_function(model_data_array, coefficients)
+    probabilityOfUserHeartDisease = round((probabilityOfUserHeartDisease*100),2)
     ageGroupLowerBound, ageGroupHigherBound, ageGroupProbability = age_group_chance(int(age))
     response = {
         "status": "success",

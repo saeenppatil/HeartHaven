@@ -98,64 +98,84 @@ body {
 .blob-container1 {
     position: relative;
     top: 40%; /* Adjust as necessary */
-    left: 17%; /* Adjust as necessary */
+    left: 6%; /* Adjust as necessary */
     display: flex;
-    gap: 18%; /* Spacing between blobs */
-    margin-bottom: 10%;
-    margin-top: 5%;
+    gap: 20%; /* Spacing between blobs */
 }
 
 .blob-container2 {
     position: relative;
     top: 70%; /* Adjust as necessary */
-    left: 23%; /* Adjust as necessary */
+    left: 21%; /* Adjust as necessary */
     display: flex;
-    gap: 15%; /* Spacing between blobs */
-    margin-bottom: 5%;
+    gap: 12%; /* Spacing between blobs */
 }
 
 .blob {
-    width: 300px; /* Size of the circle */
-    height: 300px; /* Size of the circle */
     border-radius: 50%; /* Makes it circular */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Adjust based on the amount of text */
+    text-align: center;
+    font-size: 16px; /* Adjust based on the amount of text */
+    font-family: 'Roboto Condensed', sans-serif;
     padding: 30px; /* Gives space between the text and the circle's edge */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-color: #8C1C13; /* Example color */
     color: white;
     overflow: hidden; /* Ensures no overflow outside the circle */
     line-height: 1.4; /* Adjusts the space between lines of text */
+    animation: float 3s ease-in-out infinite; /* Applies the floating animation */
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1);
+    }
 }
 
 .blob:hover {
-    transform: scale(1.1); 
+    animation-play-state: paused; /* Pause the animation on hover */
 }
 
+.statsText{
+    color:#8C1C13;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4rem;
+    margin-top: 50px;
+    margin-left: 50px;
+}
 
 .one {
     width: 430px;
     height: 430px;
-    font-size: 1.4em;
+    font-size: 2em;
+    margin-top: 70px;
 }
 
 .two {
     width: 480px;
     height: 480px;
-    font-size: 1.6em;
+    font-size: 2.2em;
+    margin-top: 70px;
 }
 
 .three {
-    width: 467px;
-    height: 467px;
-    font-size: 1.5em;
-    margin-top: -70px;
+    width: 460px;
+    height: 460px;
+    font-size: 2.1em;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .four {
     width: 421px;
     height: 421px;
-    font-size: 1.4em;
+    font-size: 1.9em;
+    margin-top: 80px;
+    margin-bottom: 50px;
 }
