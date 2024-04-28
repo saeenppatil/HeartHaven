@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+    width: 100%; /* Set to 100% of its parent container */
+    max-width: 800px; /* Maximum width can still be set to limit the size on larger screens */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 500%; /* Adjust based on number of slides */
+    background: white;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 20%; /* Each slide should be full width of the container divided by number of slides */
+    height: 50vh; /* Height can remain fixed or be made responsive with vh units */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c1c13;
+    font-size: 24px;
+    border: 4px solid #8c1c13; /* Example border: 2px solid black */
+    box-sizing: border-box;
+    border-radius: 5%;
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between items */
+    padding: 10px 50px; /* Adds padding above and below the navigation bar */
+    width: 100%;
+    margin-top: 40px;
+}
+
+.prev-btn, .next-btn {
+    background-color: #8c1c13;
+    color: white; /* Enhances visibility against the dark background */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.progress-bar {
+    width: 99.78%; /* Full width of the carousel container */
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #8c1c13;
+    width: 0%; /* Initial width */
+    border-radius: 10px;
+}

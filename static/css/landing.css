@@ -8,6 +8,12 @@ body {
     margin-bottom: 100px;
 }
 
+html, body {
+    height: 100%;  /* Make sure html and body elements take up the full height of the viewport */
+    margin: 0;     /* Remove default margin */
+    padding: 0;    /* Remove default padding */
+}
+
 #mainImage {
     width: 100%;   /* Full width */
     height: 100%;  /* Full height */
