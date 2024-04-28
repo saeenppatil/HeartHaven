@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 .navbar-custom {
     background-color: #8C1C13;
     padding: 10px 1rem;
+}
+
+p, li{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
 }
 
 .navbar-icon{
@@ -41,4 +48,31 @@
     justify-content: center;
     align-items: center;
     padding: 10rem;
+}
+
+.text-red{
+    color: #8C1C13
+}
+
+.bold{
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    outline: 2px solid #FFF;
+    outline-offset: -2px;
+    border: .1px solid #B7B7B7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
 }
