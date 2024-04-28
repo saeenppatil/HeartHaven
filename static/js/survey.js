@@ -42,14 +42,48 @@ function moveToNextSlide() {
 
 function submitForm() {
     const formData = new FormData();
+    let weight = null;
+    let height = null;
+    const results = []; // Array to store the calculated BMI values
+
+    // Collect all input values and store them in FormData
     document.querySelectorAll('.carousel-slide').forEach(slide => {
         slide.querySelectorAll('input[type="text"], input[type="radio"]:checked, input[type="range"]').forEach(input => {
             formData.append(input.name, input.value);
+            // Capture weight and height specifically for BMI calculation
+            if (input.name === "weight") {
+                weight = parseFloat(input.value);
+            } else if (input.name === "height") {
+                height = parseFloat(input.value);
+            }
         });
     });
 
-    console.log(Array.from(formData.entries())); // Debugging: See what's collected
-    alert('Form submitted! Check console for data.'); // Placeholder: Replace with actual submission logic
+    // Calculate BMI if weight and height are available and append directly to results array
+    if (weight && height) {
+        let bmi = weight / ((height / 100) ** 2); // Assumes height is in cm, converts to meters in calculation
+        formData.append('BMI', bmi.toFixed(2)); // Append the label 'BMI' and calculated value to the results array
+    }
+
+    const jsonObject = {};
+    formData.forEach((value, key) => {
+        jsonObject[key] = value;
+    });
+
+    console.log('Sending:', jsonObject);
+    // POST request using fetch API
+    fetch('/api/params', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonObject)
+    })
+    .then(response => response.json())
+    .then(data => {
+    console.log('Success:', data);
+    })
+    .catch(error => console.error('Error:', error));
 }
 
 prevBtn.addEventListener('click', () => {
