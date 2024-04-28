@@ -82,7 +82,8 @@ function submitForm() {
     })
     .then(response => response.json())
     .then(data => {
-    console.log('Success:', data);
+        console.log('Success:', data);
+        window.location.href = './go-result/user-data/'+data.+'';
     })
     .catch(error => console.error('Error:', error));
 }
