@@ -7,8 +7,8 @@ data_storage = []
 model_data_array = []
 
 # Define coefficients obtained from logistic regression model
-coefficients = np.array([0.530747, 0.711591, -0.005263, 0.430810, 1.110706, 0.241793, 0.012939, -0.122841, 0.014835, -0.814256, 0.479267, 0.003791, 0.005063, 0.124037, 0.692602, 0.237020])  # Coefficients for predictor variables
-
+#coefficients = np.array([0.530747, 0.711591, -0.005263, 0.430810, 1.110706, 0.241793, 0.012939, -0.122841, 0.014835, -0.814256, 0.479267, 0.003791, 0.005063, 0.124037, 0.692602, 0.237020])  # Coefficients for predictor variables
+coefficients = np.array([0.237020, 0.237020, 0.003791, 0.124037, 0.124037, 0.124037, -0.122841, -0.122841, -0.122841, 0.711591, - 0.814256, 0.122841, 0.122841, 0.003791, -0.003791, 0.003791])
 # Define logistic function (sigmoid function)
 def logistic_function(x, coefficients):
     z = np.dot(x, coefficients)  # Calculate the weighted sum of predictor variables and coefficients
